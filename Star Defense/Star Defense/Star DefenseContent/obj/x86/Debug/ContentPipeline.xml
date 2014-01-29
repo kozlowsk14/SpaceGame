@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Fonts\Pericles.spritefont</Source>
+      <Name>Fonts\Pericles</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb</Output>
+      <Time>2010-10-20T16:14:42-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\explosions.png</Source>
+      <Name>Textures\explosions</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb</Output>
+      <Time>2010-10-20T16:37:22-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\ParallaxStars.png</Source>
+      <Name>Textures\ParallaxStars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb</Output>
+      <Time>2014-01-25T15:21:36.6992-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\PlayerShip.png</Source>
+      <Name>Textures\PlayerShip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb</Output>
+      <Time>2010-10-20T16:46:14-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\PlayerBullet.png</Source>
+      <Name>Textures\PlayerBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb</Output>
+      <Time>2010-10-21T11:05:24-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Enemy.png</Source>
+      <Name>Textures\Enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb</Output>
+      <Time>2010-10-21T11:12:26-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TitleScreen.png</Source>
+      <Name>Textures\TitleScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb</Output>
+      <Time>2010-10-21T11:41:52-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\GameScreen.png</Source>
+      <Name>Textures\GameScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb</Output>
+      <Time>2010-10-21T12:11:24-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\PowerUp.png</Source>
+      <Name>Textures\PowerUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb</Output>
+      <Time>2010-10-21T12:17:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\PrimaryBackground.png</Source>
+      <Name>Textures\PrimaryBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb</Output>
+      <Time>2014-01-25T15:37:40.9482-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\battle003.wav</Source>
+      <Name>Sounds\battle003</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb</Output>
+      <Time>2010-10-21T13:32:22-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\battle004.wav</Source>
+      <Name>Sounds\battle004</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb</Output>
+      <Time>2010-10-21T13:32:22-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\scifi002.wav</Source>
+      <Name>Sounds\scifi002</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb</Output>
+      <Time>2010-10-21T13:32:22-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\scifi041.wav</Source>
+      <Name>Sounds\scifi041</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb</Output>
+      <Time>2010-10-21T13:32:22-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\scifi050.wav</Source>
+      <Name>Sounds\scifi050</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb</Output>
+      <Time>2010-10-21T13:32:22-07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star DefenseContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star DefenseContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-01-18T15:27:32.763-08:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
