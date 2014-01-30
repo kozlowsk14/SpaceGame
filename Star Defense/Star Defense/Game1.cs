@@ -24,7 +24,7 @@ namespace Star_Defense
         Player player;
         public int iPlayAreaTop = 30;
         public int iPlayAreaBottom = 630;
-        int iMaxVertSpeed = 8;
+        int iMaxVertSpeed = 4;
         float fBoardUpdateDelay = 0f;
         float fBoardUpdateInterval = 0.01f;
         int iBulletVerticalOffset = 12;
@@ -64,8 +64,10 @@ namespace Star_Defense
 
         Vector2 vSuperBombTextLoc = new Vector2(250, 677);
 
-        static int iMaxPowerups = 1;
+        static int iMaxPowerups = 3;
+        static int iMaxInventory = 6;
         PowerUp[] powerups = new PowerUp[iMaxPowerups];
+        PowerUp[] inventory = new PowerUp[iMaxInventory];
         float fSuperBombTimer = 2f;
         float fPowerUpSpawnCounter = 0.0f;
         float fPowerUpSpawnDelay = 5.0f;
@@ -141,6 +143,11 @@ namespace Star_Defense
             for (int i = 0; i < iMaxPowerups; i++)
             {
                 powerups[i] = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
+            }
+
+            for (int i = 0; i < iMaxInventory; i++)
+            {
+                inventory[i] = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
             }
 
             PlayerShots[0] = Content.Load<SoundEffect>(@"Sounds\Scifi002");
@@ -379,58 +386,45 @@ namespace Star_Defense
 
         protected void CheckPlayerHits()
         {
-            for (int x = 0; x < iTotalMaxEnemies; x++)
-            {
-                if (Enemies[x].IsActive)
-                {
-                    // If the enemy and ship sprites  collide...
-                    if (Intersects(player.BoundingBox, Enemies[x].CollisionBox))
-                    {
-                        // Stop event processing
-                        iProcessEvents = 0;
+            //for (int x = 0; x < iTotalMaxEnemies; x++)
+            //{
+            //    if (Enemies[x].IsActive)
+            //    {
+            //        // If the enemy and ship sprites  collide...
+            //        if (Intersects(player.BoundingBox, Enemies[x].CollisionBox))
+            //        {
+            //            // Stop event processing
+            //            iProcessEvents = 0;
 
-                        // Set up the ship's explosion
-                        Explosions[iTotalMaxEnemies].Activate(
-                            player.X - 16,
-                            player.Y - 16,
-                            Vector2.Zero,
-                            0f,
-                            background.BackgroundOffset);
+            //            // Set up the ship's explosion
+            //            Explosions[iTotalMaxEnemies].Activate(
+            //                player.X - 16,
+            //                player.Y - 16,
+            //                Vector2.Zero,
+            //                0f,
+            //                background.BackgroundOffset);
 
-                        fPlayerRespawnCount = 0.0f;
-                        ExplosionSounds[0].Play(1.0f, 0f, 0f);
+            //            fPlayerRespawnCount = 0.0f;
+            //            ExplosionSounds[0].Play(1.0f, 0f, 0f);
 
-                        return;
-                    }
-                }
-            }
+            //            return;
+            //        }
+            //    }
+            //}
 
             for (int x = 0; x < iMaxPowerups; x++)
             {
                 if ((powerups[x].IsActive) &&
                      (Intersects(player.BoundingBox, powerups[x].BoundingBox)))
                 {
-                    switch (powerups[x].PowerUpType)
+                    for (int i = 0; i < iMaxInventory; i++)
                     {
-                        case 0:
-                            iLivesLeft++;
-                            break;
-
-                        case 1:
-                            player.SuperBombs++;
-                            break;
-
-                        case 2:
-                            player.AccelerationBonus++;
-                            break;
-
-                        case 3:
-                            player.WeaponLevel++;
-                            break;
-
-                        case 4:
-                            player.FireRate++;
-                            break;
+                        if (!inventory[i].IsActive)
+                        {
+                            inventory[i].PowerUpType = powerups[x].PowerUpType;
+                            inventory[i].IsActive = true; 
+                            break; 
+                        }
 
                     }
                     powerups[x].IsActive = false;
@@ -558,7 +552,7 @@ namespace Star_Defense
                     CheckBulletHits();
 
                     // Check to see if the player has collided with any enemies
-                    //CheckPlayerHits();
+                    CheckPlayerHits();
 
                     // Accumulate time since the game board was last updated
                     // This reflects the actual movement rate of the screen
