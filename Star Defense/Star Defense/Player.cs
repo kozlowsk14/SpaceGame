@@ -10,13 +10,13 @@ namespace Star_Defense
     class Player
     {
         AnimatedSprite asSprite;
-        int iX = 360;
-        int iY = 600;
+        int iX = 1100;
+        int iY = 260;
         int iFacing = 0;
         bool bThrusting = false;
         int iScrollRate = 0;
         int iShipAccelerationRate = 1;
-        int iShipHorMoveRate = 7;
+        int iShipVerticalMoveRate = 0;
         float fSpeedChangeCount = 0.0f;
         float fSpeedChangeDelay = 0.1f;
         float fVerticalChangeCount = 0.0f;
@@ -70,10 +70,10 @@ namespace Star_Defense
             get { return iShipAccelerationRate * iAccelerationModifier; }
         }
 
-        public int HorMovementRate
+        public int VerticalMovementRate
         {
-            get { return iShipHorMoveRate; }
-            set { iShipHorMoveRate = value; }
+            get { return iShipVerticalMoveRate; }
+            set { iShipVerticalMoveRate = value; }
         }
 
         public float SpeedChangeCount

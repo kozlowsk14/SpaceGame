@@ -13,14 +13,14 @@ namespace Star_Defense
         // Textures to hold the two background images
         Texture2D t2dBackground, t2dParallax;
 
-        int iViewportWidth = 720;
-        int iViewportHeight = 1920;
+        int iViewportWidth = 1280;
+        int iViewportHeight = 720;
 
-        int iBackgroundWidth = 720;
-        int iBackgroundHeight = 1920;
+        int iBackgroundWidth = 1920;
+        int iBackgroundHeight = 720;
 
-        int iParallaxWidth = 720;
-        int iParallaxHeight = 1680;
+        int iParallaxWidth = 1680;
+        int iParallaxHeight = 480;
 
         int iBackgroundOffset;
         int iParallaxOffset;
@@ -33,11 +33,11 @@ namespace Star_Defense
                 iBackgroundOffset = value;
                 if (iBackgroundOffset < 0)
                 {
-                    iBackgroundOffset += iBackgroundHeight;
+                    iBackgroundOffset += iBackgroundWidth;
                 }
-                if (iBackgroundOffset > iBackgroundHeight)
+                if (iBackgroundOffset > iBackgroundWidth)
                 {
-                    iBackgroundOffset -= iBackgroundHeight;
+                    iBackgroundOffset -= iBackgroundWidth;
                 }
             }
         }
@@ -50,11 +50,11 @@ namespace Star_Defense
                 iParallaxOffset = value;
                 if (iParallaxOffset < 0)
                 {
-                    iParallaxOffset += iParallaxHeight;
+                    iParallaxOffset += iParallaxWidth;
                 }
-                if (iParallaxOffset > iParallaxHeight)
+                if (iParallaxOffset > iParallaxWidth)
                 {
-                    iParallaxOffset -= iParallaxHeight;
+                    iParallaxOffset -= iParallaxWidth;
                 }
             }
         }
@@ -100,46 +100,46 @@ namespace Star_Defense
             // Draw the background panel, offset by the player's location
             spriteBatch.Draw(
                 t2dBackground,
-                new Rectangle(0,
-                              -1 * iBackgroundOffset, iBackgroundWidth,
+                new Rectangle(-1 * iBackgroundOffset,
+                              0, iBackgroundWidth,
                               iViewportHeight),
                 Color.White);
 
             // If the right edge of the background panel will end 
             // within the bounds of the display, draw a second copy 
             // of the background at that location.
-            if (iBackgroundOffset > iBackgroundHeight - iViewportHeight)
+            if (iBackgroundOffset > iBackgroundWidth - iViewportWidth)
             {
                 spriteBatch.Draw(
                     t2dBackground,
                     new Rectangle(
+                      (-1 * iBackgroundOffset) + iBackgroundWidth,
                       0,
-                      (-1 * iBackgroundOffset) + iBackgroundHeight,
                       iBackgroundWidth,
                       iViewportHeight),
                     Color.White);
             }
 
-            if (drawParallax && false)
+            if (drawParallax)
             {
                 // Draw the parallax star field
                 spriteBatch.Draw(
                     t2dParallax,
-                    new Rectangle(0,
-                                  -1 * iParallaxOffset, iParallaxWidth,
+                    new Rectangle(-1 * iParallaxOffset,
+                                  0, iParallaxWidth,
                                   iViewportHeight),
                     Color.SlateGray);
                 // if the player is past the point where the star 
                 // field will end on the active screen we need 
                 // to draw a second copy of it to cover the 
                 // remaining screen area.
-                if (iParallaxOffset > iParallaxHeight - iViewportHeight)
+                if (iParallaxOffset > iParallaxWidth - iViewportWidth)
                 {
                     spriteBatch.Draw(
                         t2dParallax,
                         new Rectangle(
+                          (-1 * iParallaxOffset) + iParallaxWidth,
                           0,
-                          (-1 * iParallaxOffset) + iParallaxHeight,
                           iParallaxWidth,
                           iViewportHeight),
                         Color.SlateGray);

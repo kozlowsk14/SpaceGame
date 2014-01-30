@@ -24,7 +24,9 @@ namespace Star_Defense
         Player player;
         public int iPlayAreaTop = 30;
         public int iPlayAreaBottom = 630;
-        int iMaxVertSpeed = 8;
+        int iMaxVerticalSpeed = 8;
+        int iVerticalSpeed = 0;
+        int sideScrollRate = 8;
         float fBoardUpdateDelay = 0f;
         float fBoardUpdateInterval = 0.01f;
         int iBulletVerticalOffset = 12;
@@ -92,7 +94,7 @@ namespace Star_Defense
             // TODO: Add your initialization logic here
 
             graphics.PreferredBackBufferHeight = 720;
-            graphics.PreferredBackBufferWidth = 720;
+            graphics.PreferredBackBufferWidth = 1280;
             graphics.ApplyChanges();
             base.Initialize();
         }
@@ -278,23 +280,20 @@ namespace Star_Defense
             }
         }
 
-        protected void CheckVertMovementKeys(KeyboardState ksKeys,
+        protected void CheckHorizontalMovementKeys(KeyboardState ksKeys,
                                    GamePadState gsPad)
         {
             bool bResetTimer = false;
 
             player.Thrusting = false;
-            //NEED TO MOVE THIS TO INIT
-            player.ScrollRate = -iMaxVertSpeed;
-
             //if ((ksKeys.IsKeyDown(Keys.Right)) ||
             //    (gsPad.ThumbSticks.Left.X > 0))
             //{
-            //    if (player.ScrollRate < iMaxVertSpeed)
+            //    if (player.ScrollRate < iMaxHorizontalSpeed)
             //    {
             //        player.ScrollRate += player.AccelerationRate;
-            //        if (player.ScrollRate > iMaxVertSpeed)
-            //            player.ScrollRate = iMaxVertSpeed;
+            //        if (player.ScrollRate > iMaxHorizontalSpeed)
+            //            player.ScrollRate = iMaxHorizontalSpeed;
             //        bResetTimer = true;
             //    }
             //    player.Thrusting = true;
@@ -304,47 +303,76 @@ namespace Star_Defense
             //if ((ksKeys.IsKeyDown(Keys.Left)) ||
             //    (gsPad.ThumbSticks.Left.X < 0))
             //{
-            //    if (player.ScrollRate > -iMaxVertSpeed)
+            //    if (player.ScrollRate > -iMaxHorizontalSpeed)
             //    {
             //        player.ScrollRate -= player.AccelerationRate;
-            //        if (player.ScrollRate < -iMaxVertSpeed)
-            //            player.ScrollRate = -iMaxVertSpeed;
+            //        if (player.ScrollRate < -iMaxHorizontalSpeed)
+            //            player.ScrollRate = -iMaxHorizontalSpeed;
             //        bResetTimer = true;
             //    }
             //    player.Thrusting = true;
             //    player.Facing = 1;
             //}
+            player.ScrollRate = -sideScrollRate;
+            player.Thrusting = true;
+            player.Facing = 1;
 
             if (bResetTimer)
                 player.SpeedChangeCount = 0.0f;
         }
 
-        protected void CheckHorMovementKeys(KeyboardState ksKeys,
+        protected void CheckVerticalMovementKeys(KeyboardState ksKeys,
                                  GamePadState gsPad)
         {
 
             bool bResetTimer = false;
 
-            if ((ksKeys.IsKeyDown(Keys.Left)))
+            if ((ksKeys.IsKeyDown(Keys.Up)) ||
+                (gsPad.ThumbSticks.Left.Y > 0))
             {
-                if (player.X > iPlayAreaTop)
+                if (player.VerticalMovementRate < iMaxVerticalSpeed)
                 {
-                    player.X -= player.HorMovementRate;
-                    player.Thrusting = true;
-                    player.Facing = 1;
+                    player.VerticalMovementRate += 1;
+                    if (player.VerticalMovementRate > iMaxVerticalSpeed)
+                        player.VerticalMovementRate = iMaxVerticalSpeed;
                     bResetTimer = true;
+                }
+                if (player.Y > iPlayAreaTop)
+                {
+                    player.Y -= player.VerticalMovementRate;
+                    bResetTimer = true;
+                }
+                else
+                {
+                    player.Y = iPlayAreaTop;
+                    player.VerticalMovementRate = 0;
                 }
             }
 
-            if ((ksKeys.IsKeyDown(Keys.Right))) 
+            else if ((ksKeys.IsKeyDown(Keys.Down)) ||
+                (gsPad.ThumbSticks.Left.Y < 0))
             {
-                if (player.X < iPlayAreaBottom)
+                if (player.VerticalMovementRate > -iMaxVerticalSpeed)
                 {
-                    player.X += player.HorMovementRate;
-                    player.Thrusting = true;
-                    player.Facing = 0;
+                    player.VerticalMovementRate -= 1;
+                    if (player.VerticalMovementRate < -iMaxVerticalSpeed)
+                        player.VerticalMovementRate = -iMaxVerticalSpeed;
                     bResetTimer = true;
                 }
+                if (player.Y < iPlayAreaBottom)
+                {
+                    player.Y -= player.VerticalMovementRate;
+                    bResetTimer = true;
+                }
+                else
+                {
+                    player.Y = iPlayAreaBottom;
+                    player.VerticalMovementRate = 0;
+                }
+            }
+            else
+            {
+                player.VerticalMovementRate = 0;
             }
 
             if (bResetTimer)
@@ -540,19 +568,19 @@ namespace Star_Defense
                     player.SpeedChangeCount += elapsed;
 
                     // If enough time has passed that the player can change
-                    // speed again, call CheckVertMovementKeys
+                    // speed again, call CheckHorizontalMovementKeys
                     if (player.SpeedChangeCount > player.SpeedChangeDelay)
                     {
-                        CheckVertMovementKeys(keystate, gamepadstate);
+                        CheckHorizontalMovementKeys(keystate, gamepadstate);
                     }
 
                     // Accumulate time since the player moved vertically
                     player.VerticalChangeCount += elapsed;
 
-                    // If enough time has passed, call CheckHorMovementKeys
+                    // If enough time has passed, call CheckVerticalMovementKeys
                     if (player.VerticalChangeCount > player.VerticalChangeDelay)
                     {
-                        CheckHorMovementKeys(keystate, gamepadstate);
+                        CheckVerticalMovementKeys(keystate, gamepadstate);
                     }
 
                     // Check any other key presses

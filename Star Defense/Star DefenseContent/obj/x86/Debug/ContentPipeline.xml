@@ -7,17 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb</Output>
-      <Time>2010-10-20T16:14:42-07:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\explosions.png</Source>
-      <Name>Textures\explosions</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb</Output>
-      <Time>2010-10-20T16:37:22-07:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb</Output>
+      <Time>2014-01-22T21:26:02.2203048-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\ParallaxStars.png</Source>
@@ -25,62 +16,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb</Output>
-      <Time>2014-01-25T15:21:36-08:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb</Output>
+      <Time>2014-01-22T21:26:02.3483121-08:00</Time>
     </Item>
     <Item>
-      <Source>Textures\PlayerShip.png</Source>
-      <Name>Textures\PlayerShip</Name>
+      <Source>Textures\explosions.png</Source>
+      <Name>Textures\explosions</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb</Output>
-      <Time>2010-10-20T16:46:14-07:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\PlayerBullet.png</Source>
-      <Name>Textures\PlayerBullet</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb</Output>
-      <Time>2010-10-21T11:05:24-07:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\Enemy.png</Source>
-      <Name>Textures\Enemy</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb</Output>
-      <Time>2010-10-21T11:12:26-07:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\TitleScreen.png</Source>
-      <Name>Textures\TitleScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb</Output>
-      <Time>2010-10-21T11:41:52-07:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\GameScreen.png</Source>
-      <Name>Textures\GameScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb</Output>
-      <Time>2010-10-21T12:11:24-07:00</Time>
-    </Item>
-    <Item>
-      <Source>Textures\PowerUp.png</Source>
-      <Name>Textures\PowerUp</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb</Output>
-      <Time>2010-10-21T12:17:06-07:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb</Output>
+      <Time>2014-01-22T21:26:02.329311-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\PrimaryBackground.png</Source>
@@ -88,8 +34,62 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb</Output>
-      <Time>2014-01-25T15:37:40-08:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb</Output>
+      <Time>2014-01-22T21:26:02.3883144-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\PlayerShip.png</Source>
+      <Name>Textures\PlayerShip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb</Output>
+      <Time>2014-01-22T21:26:02.3633129-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\PlayerBullet.png</Source>
+      <Name>Textures\PlayerBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb</Output>
+      <Time>2014-01-22T21:26:02.3563125-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Enemy.png</Source>
+      <Name>Textures\Enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb</Output>
+      <Time>2014-01-22T21:26:02.3143101-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\TitleScreen.png</Source>
+      <Name>Textures\TitleScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb</Output>
+      <Time>2014-01-22T21:26:02.4053153-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\GameScreen.png</Source>
+      <Name>Textures\GameScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb</Output>
+      <Time>2014-01-22T21:26:02.3383115-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\PowerUp.png</Source>
+      <Name>Textures\PowerUp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb</Output>
+      <Time>2014-01-22T21:26:02.3723135-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\battle003.wav</Source>
@@ -97,8 +97,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb</Output>
-      <Time>2010-10-21T13:32:22-07:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb</Output>
+      <Time>2014-01-22T21:26:02.2703076-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\battle004.wav</Source>
@@ -106,8 +106,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb</Output>
-      <Time>2010-10-21T13:32:22-07:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb</Output>
+      <Time>2014-01-22T21:26:02.2783081-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\scifi002.wav</Source>
@@ -115,8 +115,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb</Output>
-      <Time>2010-10-21T13:32:22-07:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb</Output>
+      <Time>2014-01-22T21:26:02.2863085-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\scifi041.wav</Source>
@@ -124,8 +124,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb</Output>
-      <Time>2010-10-21T13:32:22-07:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb</Output>
+      <Time>2014-01-22T21:26:02.294309-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\scifi050.wav</Source>
@@ -133,8 +133,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb</Output>
-      <Time>2010-10-21T13:32:22-07:00</Time>
+      <Output>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb</Output>
+      <Time>2014-01-22T21:26:02.3033095-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -142,10 +142,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star DefenseContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star DefenseContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star DefenseContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star DefenseContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\lenovo\Downloads\StarDefense_final4\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
