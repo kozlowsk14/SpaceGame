@@ -24,7 +24,7 @@ namespace Star_Defense
         Player player;
         public int iPlayAreaTop = 30;
         public int iPlayAreaBottom = 630;
-        int iMaxVertSpeed = 5;
+        int iMaxVertSpeed = 8;
         float fBoardUpdateDelay = 0f;
         float fBoardUpdateInterval = 0.01f;
         int iBulletVerticalOffset = 12;
@@ -64,7 +64,7 @@ namespace Star_Defense
 
         Vector2 vSuperBombTextLoc = new Vector2(250, 677);
 
-        static int iMaxPowerups = 100;
+        static int iMaxPowerups = 5;
         PowerUp[] powerups = new PowerUp[iMaxPowerups];
         float fSuperBombTimer = 2f;
         float fPowerUpSpawnCounter = 0.0f;
@@ -122,8 +122,7 @@ namespace Star_Defense
 
             for (int i = 0; i < iTotalMaxEnemies; i++)
             {
-                int dir = rndGen.Next(0, 2);
-                Enemies[i] = new Enemy(t2dEnemyShip, 0, 0, 32, 32, 1, dir);
+                Enemies[i] = new Enemy(t2dEnemyShip, 0, 0, 32, 32, 1);
             }
 
             t2dExplosionSheet = Content.Load<Texture2D>(@"Textures\Explosions");

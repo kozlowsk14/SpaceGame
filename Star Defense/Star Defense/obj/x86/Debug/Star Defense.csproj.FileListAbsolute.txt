@@ -19,24 +19,45 @@ c:\users\kurt\documents\visual studio 2010\Projects\Star Defense\Star Defense\St
 c:\users\kurt\documents\visual studio 2010\Projects\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb
 c:\users\kurt\documents\visual studio 2010\Projects\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb
 c:\users\kurt\documents\visual studio 2010\Projects\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Star Defense.exe
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Star Defense.pdb
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Star Defense.exe
-C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Star Defense.pdb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Star Defense.exe
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\bin\x86\Debug\Star Defense.pdb
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\obj\x86\Debug\Star Defense.exe
+C:\Users\MarleyRutkowski\Desktop\Star Defense\Star Defense\Star Defense\obj\x86\Debug\Star Defense.pdb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Star Defense.exe
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\bin\x86\Debug\Star Defense.pdb
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\obj\x86\Debug\Star Defense.exe
+C:\Users\lenovo\Dropbox\Star Defense (1)\Star Defense\Star Defense\obj\x86\Debug\Star Defense.pdb
