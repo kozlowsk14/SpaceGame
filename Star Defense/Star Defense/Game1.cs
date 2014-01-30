@@ -24,7 +24,7 @@ namespace Star_Defense
         Player player;
         public int iPlayAreaTop = 30;
         public int iPlayAreaBottom = 630;
-        int iMaxVertSpeed = 5;
+        int iMaxVertSpeed = 8;
         float fBoardUpdateDelay = 0f;
         float fBoardUpdateInterval = 0.01f;
         int iBulletVerticalOffset = 12;
@@ -64,11 +64,11 @@ namespace Star_Defense
 
         Vector2 vSuperBombTextLoc = new Vector2(250, 677);
 
-        static int iMaxPowerups = 100;
+        static int iMaxPowerups = 1;
         PowerUp[] powerups = new PowerUp[iMaxPowerups];
         float fSuperBombTimer = 2f;
         float fPowerUpSpawnCounter = 0.0f;
-        float fPowerUpSpawnDelay = 30.0f;
+        float fPowerUpSpawnDelay = 5.0f;
 
         static int iMaxExplosionSounds = 2;
         private static SoundEffect[] PlayerShots = new SoundEffect[2];
@@ -122,8 +122,7 @@ namespace Star_Defense
 
             for (int i = 0; i < iTotalMaxEnemies; i++)
             {
-                int dir = rndGen.Next(0, 2);
-                Enemies[i] = new Enemy(t2dEnemyShip, 0, 0, 32, 32, 1, dir);
+                Enemies[i] = new Enemy(t2dEnemyShip, 0, 0, 32, 32, 1);
             }
 
             t2dExplosionSheet = Content.Load<Texture2D>(@"Textures\Explosions");
@@ -172,7 +171,7 @@ namespace Star_Defense
             for (int x = 0; x < iMaxEnemies; x++)
             {
                 Enemies[x].Generate(background.BackgroundOffset,
-                                    player.X);
+                                    player.Y);
                 iActiveEnemies += 1;
             }
         }
@@ -234,7 +233,6 @@ namespace Star_Defense
                                              player.Y + iBulletVerticalOffset + iVerticalOffset,
                                              player.Facing);
                     break;
-
                 }
             }
 
@@ -287,34 +285,6 @@ namespace Star_Defense
             player.Thrusting = false;
             //NEED TO MOVE THIS TO INIT
             player.ScrollRate = -iMaxVertSpeed;
-
-            //if ((ksKeys.IsKeyDown(Keys.Right)) ||
-            //    (gsPad.ThumbSticks.Left.X > 0))
-            //{
-            //    if (player.ScrollRate < iMaxVertSpeed)
-            //    {
-            //        player.ScrollRate += player.AccelerationRate;
-            //        if (player.ScrollRate > iMaxVertSpeed)
-            //            player.ScrollRate = iMaxVertSpeed;
-            //        bResetTimer = true;
-            //    }
-            //    player.Thrusting = true;
-            //    player.Facing = 0;
-            //}
-
-            //if ((ksKeys.IsKeyDown(Keys.Left)) ||
-            //    (gsPad.ThumbSticks.Left.X < 0))
-            //{
-            //    if (player.ScrollRate > -iMaxVertSpeed)
-            //    {
-            //        player.ScrollRate -= player.AccelerationRate;
-            //        if (player.ScrollRate < -iMaxVertSpeed)
-            //            player.ScrollRate = -iMaxVertSpeed;
-            //        bResetTimer = true;
-            //    }
-            //    player.Thrusting = true;
-            //    player.Facing = 1;
-            //}
 
             if (bResetTimer)
                 player.SpeedChangeCount = 0.0f;
@@ -485,8 +455,9 @@ namespace Star_Defense
             {
                 if (!powerups[x].IsActive)
                 {
-                    powerups[x].X = rndGen.Next(0, 1920);
-                    powerups[x].Y = rndGen.Next(30, 630);
+                    powerups[x].X = rndGen.Next(0, 720);
+                    System.Diagnostics.Debug.WriteLine(background.BackgroundOffset);
+                    powerups[x].Y = background.BackgroundOffset;
                     powerups[x].PowerUpType = rndGen.Next(0, 5);
                     powerups[x].Offset = background.BackgroundOffset;
                     powerups[x].Activate();

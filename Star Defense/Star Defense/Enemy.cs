@@ -11,10 +11,9 @@ namespace Star_Defense
     {
         AnimatedSprite asSprite;
 
-        static int iMapWidth = 720;
-        static int iMapHeight = 720;
-        static int iPlayAreaTop = 30;
-        static int iPlayAreaBottom = 630;
+        static int iMapHeight = 1920;
+        static int iPlayAreaLeft = 30;
+        static int iPlayAreaRight = 700;
         static Random rndGen = new Random();
         int iX = 0;
         int iY = -100;
@@ -24,8 +23,6 @@ namespace Star_Defense
         float fEnemyMoveCount = 0.0f;
         float fEnemyDelay = 0.01f;
         bool bActive = false;
-        //constant to figure out if going left to right or vice versa
-        int iDirection = 0;
 
         public int X
         {
@@ -53,7 +50,7 @@ namespace Star_Defense
                     Y -= iMapHeight;
                 if (Y < 0)
                     Y += iMapHeight;
-                return new Rectangle(Y, iX, 32, 32);
+                return new Rectangle(iX, Y, 32, 32);
             }
         }
 
@@ -88,24 +85,19 @@ namespace Star_Defense
         }
 
         public Enemy(Texture2D texture,
-              int X, int Y, int W, int H, int Frames, int dir)
+              int X, int Y, int W, int H, int Frames)
         {
             asSprite = new AnimatedSprite(texture, X, Y, W, H, Frames);
-            if (dir == 0)
-            {
-                iDirection = -1;
-                System.Diagnostics.Debug.Write("direction is negative\n");
-            }
-            else
-            {
-                iDirection = 1;
-                System.Diagnostics.Debug.Write("direction is positive\n");
-            }
         }
 
         public void Deactivate()
         {
             bActive = false;
+        }
+
+        private int GetDrawX()
+        {
+            return iX;
         }
 
         private int GetDrawY()
@@ -122,27 +114,26 @@ namespace Star_Defense
 
         public void RandomizeMovement()
         {
-            v2motion.Y = rndGen.Next(-50, 50);
-            v2motion.X = rndGen.Next(0, 50);
+            v2motion.X = rndGen.Next(-20, 20);
+            v2motion.Y = rndGen.Next(-2, 2);
             v2motion.Normalize();
             fSpeed = (float)(rndGen.Next(3, 6));
         }
 
-        public void Generate(int iLocation, int iShipX)
+        public void Generate(int iLocation, int iShipY)
         {
-            iBackgroundOffset = iLocation;
-            if (iDirection == 1)
+            // Generate a random X location that is NOT 
+            // within 200 pixels of the player's ship.
+            do
             {
-                iX = iMapWidth;
-            }
-            else
-            {
-                iX = 0;
-            }
-            // Generate a random Y location between iPlayAreaTop 
-            // and iPlayAreaBottom (the area of our game screen)
+                iY = rndGen.Next(iMapHeight);
+                iBackgroundOffset = iLocation;
+            } while (Math.Abs(GetDrawY() - iShipY) < 200);
 
-            iY = rndGen.Next(iMapHeight);
+            // Generate a random Y location between iPlayAreaLeft 
+            // and iPlayAreaRight (the area of our game screen)
+
+            iX = rndGen.Next(iPlayAreaLeft, iPlayAreaRight);
             RandomizeMovement();
             bActive = true;
         }
@@ -150,7 +141,7 @@ namespace Star_Defense
         public void Draw(SpriteBatch sb, int iLocation)
         {
             if (bActive)
-                asSprite.Draw(sb, iX, GetDrawY(), false);
+                asSprite.Draw(sb, GetDrawX(), GetDrawY(), false);
         }
 
         public void Update(GameTime gametime, int iOffset)
@@ -160,9 +151,7 @@ namespace Star_Defense
             fEnemyMoveCount += (float)gametime.ElapsedGameTime.TotalSeconds;
             if (fEnemyMoveCount > fEnemyDelay)
             {
-                System.Diagnostics.Debug.Write("" + iX);
-                iX += (int)((float)v2motion.X * fSpeed * iDirection);
-                System.Diagnostics.Debug.Write("" + iX);
+                iX += (int)((float)v2motion.X * fSpeed);
                 iY += (int)((float)v2motion.Y * fSpeed);
 
                 if (rndGen.Next(200) == 1)
@@ -170,23 +159,23 @@ namespace Star_Defense
                     RandomizeMovement();
                 }
 
-                if (iY < iPlayAreaTop)
+                if (iX < iPlayAreaLeft)
                 {
-                    iY = iPlayAreaTop;
+                    iX = iPlayAreaLeft;
                     RandomizeMovement();
                 }
 
-                if (iY > iPlayAreaBottom)
+                if (iX > iPlayAreaRight)
                 {
-                    iY = iPlayAreaBottom;
+                    iX = iPlayAreaRight;
                     RandomizeMovement();
                 }
 
-                if (iX < 0)
-                    iX += iMapWidth;
+                if (iY < 0)
+                    iY += iMapHeight;
 
-                if (iX > iMapWidth)
-                    iX -= iMapWidth;
+                if (iY > iMapHeight)
+                    iY -= iMapHeight;
 
                 fEnemyMoveCount = 0f;
             }

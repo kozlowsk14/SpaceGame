@@ -9,7 +9,7 @@ namespace Star_Defense
 {
     class PowerUp
     {
-        static int iMapWidth = 1920;
+        static int iMapHeight = 1920;
         static Color[] colorPowerUpColors = new Color[5] 
           { Color.White, Color.Aquamarine, Color.Maroon, 
             Color.Yellow, Color.Orange };
@@ -59,12 +59,12 @@ namespace Star_Defense
         {
             get
             {
-                int X = iX - iBackgroundOffset;
-                if (X > iMapWidth)
-                    X -= iMapWidth;
-                if (X < 0)
-                    X += iMapWidth;
-                return new Rectangle(X, iY, 32, 32);
+                int Y = iY - iBackgroundOffset;
+                if (Y > iMapHeight)
+                    Y -= iMapHeight;
+                if (Y < 0)
+                    Y += iMapHeight;
+                return new Rectangle(iX, Y, 32, 32);
             }
         }
 
@@ -80,13 +80,19 @@ namespace Star_Defense
 
         private int GetDrawX()
         {
-            int X = iX - iBackgroundOffset;
-            if (X > iMapWidth)
-                X -= iMapWidth;
-            if (X < 0)
-                X += iMapWidth;
+            return iX;
+        }
 
-            return X;
+        private int GetDrawY()
+        {
+            int Y = iY - iBackgroundOffset;
+            if (Y > iMapHeight)
+
+                Y -= iMapHeight;
+            if (Y < 0)
+                Y += iMapHeight;
+
+            return Y;
         }
 
         public void Update(GameTime gametime, int iOffset)
@@ -95,6 +101,14 @@ namespace Star_Defense
             {
                 asSprite.Update(gametime);
                 iBackgroundOffset = iOffset;
+                System.Diagnostics.Debug.WriteLine(GetDrawY());
+                if (GetDrawY() >= iMapHeight-20)
+                {
+               
+                    bActive = false;
+                 
+                }
+                    
             }
         }
 
@@ -102,7 +116,7 @@ namespace Star_Defense
         {
             if (bActive)
             {
-                asSprite.Draw(sb, GetDrawX(), iY, false);
+                asSprite.Draw(sb, GetDrawX(), GetDrawY(), false);
             }
         }
 
