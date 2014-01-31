@@ -10,9 +10,9 @@ namespace Star_Defense
     class PowerUp
     {
         static int iMapHeight = 1920;
-        static Color[] colorPowerUpColors = new Color[5] 
+        static Color[] colorPowerUpColors = new Color[10] 
           { Color.White, Color.Aquamarine, Color.Maroon, 
-            Color.Yellow, Color.Orange };
+            Color.Yellow, Color.Orange, Color.Red,Color.YellowGreen,Color.SteelBlue,Color.SandyBrown,Color.MistyRose};
 
         AnimatedSprite asSprite;
         int iX = 0;
@@ -101,7 +101,7 @@ namespace Star_Defense
             {
                 asSprite.Update(gametime);
                 iBackgroundOffset = iOffset;
-                System.Diagnostics.Debug.WriteLine(GetDrawY());
+                //System.Diagnostics.Debug.WriteLine(GetDrawY());
                 if (GetDrawY() >= iMapHeight-20)
                 {
                

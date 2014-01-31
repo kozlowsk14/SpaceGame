@@ -56,13 +56,15 @@ namespace Star_Defense
 
         Texture2D t2dGameScreen;
         SpriteFont spriteFont;
-        Vector2 vLivesTextLoc = new Vector2(100, 677);
-        Vector2 vWaveTextLoc = new Vector2(1065, 663);
-        Vector2 vScoreTextLoc = new Vector2(1065, 695);
+        static int SHIFT = 300;
+        Vector2[] vInventoyLoc = new Vector2[6] { new Vector2(5 + SHIFT, 677), new Vector2(55 + SHIFT, 677), new Vector2(105 + SHIFT, 677), new Vector2(155 + SHIFT, 677), new Vector2(205 + SHIFT, 677), new Vector2(255 + SHIFT, 677) };
+        //Vector2 vLivesTextLoc = new Vector2(100, 677);
+        //Vector2 vWaveTextLoc = new Vector2(1065, 663);
+        //Vector2 vScoreTextLoc = new Vector2(1065, 695);
         Vector2 vStartTextLoc = new Vector2(30, 350);
-        Vector2 vGameOverTextLoc = new Vector2(570, 330);
+        Vector2 vGameOverTextLoc = new Vector2(330, 330);
 
-        Vector2 vSuperBombTextLoc = new Vector2(250, 677);
+        //Vector2 vSuperBombTextLoc = new Vector2(250, 677);
 
         static int iMaxPowerups = 3;
         static int iMaxInventory = 6;
@@ -255,19 +257,19 @@ namespace Star_Defense
             // player's weapon.  The weapon has it's
             // own regulating delay (fBulletDelayTimer) 
             // to pace the firing of the player's weapon.
-            if ((ksKeys.IsKeyDown(Keys.Space)) ||
-                (gsPad.Buttons.A == ButtonState.Pressed))
-            {
-                if (fBulletDelayTimer >= player.FireDelay)
-                {
-                    FireBullet(0);
-                    fBulletDelayTimer = 0.0f;
-                    if (player.WeaponLevel == 1)
-                    {
-                        FireBullet(-4);
-                    }
-                }
-            }
+            //if ((ksKeys.IsKeyDown(Keys.Space)) ||
+            //    (gsPad.Buttons.A == ButtonState.Pressed))
+            //{
+            //    if (fBulletDelayTimer >= player.FireDelay)
+            //    {
+            //        FireBullet(0);
+            //        fBulletDelayTimer = 0.0f;
+            //        if (player.WeaponLevel == 1)
+            //        {
+            //            FireBullet(-4);
+            //        }
+            //    }
+            //}
 
             // The Backspace (keyboard) or B (gamepad)
             // button is used to trigger a "Super Bomb"
@@ -297,6 +299,34 @@ namespace Star_Defense
                 player.SpeedChangeCount = 0.0f;
         }
 
+        protected void CheckNumKey(KeyboardState ksKeys,
+                                 GamePadState gsPad)
+        {
+            if ((ksKeys.IsKeyDown(Keys.D1)))
+            {
+                inventory[0].IsActive = false;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D2)))
+            {
+                inventory[1].IsActive = false;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D3)))
+            {
+                inventory[2].IsActive = false;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D4)))
+            {
+                inventory[3].IsActive = false;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D5)))
+            {
+                inventory[4].IsActive = false;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D6)))
+            {
+                inventory[5].IsActive = false;
+            }
+        }
         protected void CheckHorMovementKeys(KeyboardState ksKeys,
                                  GamePadState gsPad)
         {
@@ -386,50 +416,100 @@ namespace Star_Defense
 
         protected void CheckPlayerHits()
         {
-            //for (int x = 0; x < iTotalMaxEnemies; x++)
-            //{
-            //    if (Enemies[x].IsActive)
-            //    {
-            //        // If the enemy and ship sprites  collide...
-            //        if (Intersects(player.BoundingBox, Enemies[x].CollisionBox))
-            //        {
-            //            // Stop event processing
-            //            iProcessEvents = 0;
+            for (int x = 0; x < iTotalMaxEnemies; x++)
+            {
+                if (Enemies[x].IsActive)
+                {
+                    // If the enemy and ship sprites  collide...
+                    if (Intersects(player.BoundingBox, Enemies[x].CollisionBox))
+                    {
+                        // Stop event processing
+                        iProcessEvents = 0;
 
-            //            // Set up the ship's explosion
-            //            Explosions[iTotalMaxEnemies].Activate(
-            //                player.X - 16,
-            //                player.Y - 16,
-            //                Vector2.Zero,
-            //                0f,
-            //                background.BackgroundOffset);
+                        // Set up the ship's explosion
+                        Explosions[iTotalMaxEnemies].Activate(
+                            player.X - 16,
+                            player.Y - 16,
+                            Vector2.Zero,
+                            0f,
+                            background.BackgroundOffset);
 
-            //            fPlayerRespawnCount = 0.0f;
-            //            ExplosionSounds[0].Play(1.0f, 0f, 0f);
+                        fPlayerRespawnCount = 0.0f;
+                        ExplosionSounds[0].Play(1.0f, 0f, 0f);
 
-            //            return;
-            //        }
-            //    }
-            //}
+                        bool gameOver = true;
+
+                        //check if player has any items
+                        foreach (PowerUp p in inventory)
+                        {
+                            if (p.IsActive)
+                            {
+                                gameOver = false;
+                            }
+                        }
+
+                        //player lost
+                        if (gameOver)
+                        {
+                            iLivesLeft = 1;
+                            iGameStarted = 0;
+                            iProcessEvents = 1;
+                        }
+
+                        //clear out inventory
+                        foreach (PowerUp p in inventory)
+                        {
+                            p.IsActive = false;
+                        }
+                        return;
+                    }
+                }
+            }
 
             for (int x = 0; x < iMaxPowerups; x++)
             {
                 if ((powerups[x].IsActive) &&
                      (Intersects(player.BoundingBox, powerups[x].BoundingBox)))
                 {
+                    //check to see if powerup is in already in inv
+                    bool alreadyHave = false;
                     for (int i = 0; i < iMaxInventory; i++)
                     {
-                        if (!inventory[i].IsActive)
+                        if (inventory[i].IsActive)
                         {
-                            inventory[i].PowerUpType = powerups[x].PowerUpType;
-                            inventory[i].IsActive = true; 
-                            break; 
+                            if(powerups[x].PowerUpType == inventory[i].PowerUpType)
+                            {
+                                alreadyHave = true; 
+                                break; 
+                            }
                         }
 
+                    }
+                    //add if not in inventory
+                    if (!alreadyHave)
+                    {
+                        for (int i = 0; i < iMaxInventory; i++)
+                        {
+                            if (!inventory[i].IsActive)
+                            {
+                                inventory[i].PowerUpType = powerups[x].PowerUpType;
+                                inventory[i].IsActive = true;
+                                break;
+                            }
+
+                        }
                     }
                     powerups[x].IsActive = false;
                     PowerUpPickupSound.Play(1.0f, 0f, 0f);
                 }
+                //print inventory to console until we figure out how to update the gui
+                //for (int i = 0; i < iMaxInventory; i++)
+                //{
+                //    System.Diagnostics.Debug.WriteLine("" + inventory[i].PowerUpType + inventory[i].IsActive);
+                    
+                //}
+                //System.Diagnostics.Debug.WriteLine("\n\n");
+
             }
         }
 
@@ -452,7 +532,7 @@ namespace Star_Defense
                     powerups[x].X = rndGen.Next(0, 720);
                     System.Diagnostics.Debug.WriteLine(background.BackgroundOffset);
                     powerups[x].Y = background.BackgroundOffset;
-                    powerups[x].PowerUpType = rndGen.Next(0, 5);
+                    powerups[x].PowerUpType = rndGen.Next(0, 10);
                     powerups[x].Offset = background.BackgroundOffset;
                     powerups[x].Activate();
                     break;
@@ -519,6 +599,7 @@ namespace Star_Defense
                     if (player.VerticalChangeCount > player.VerticalChangeDelay)
                     {
                         CheckHorMovementKeys(keystate, gamepadstate);
+                        CheckNumKey(keystate, gamepadstate);
                     }
 
                     // Check any other key presses
@@ -549,7 +630,7 @@ namespace Star_Defense
                           background.BackgroundOffset);
 
                     // See if any active bullets hit any active enemies
-                    CheckBulletHits();
+                    //CheckBulletHits();
 
                     // Check to see if the player has collided with any enemies
                     CheckPlayerHits();
@@ -585,11 +666,11 @@ namespace Star_Defense
                             PlayerKilled();
                             StartNewWave();
                         }
-                        else
-                        {
-                            iGameStarted = 0;
-                            iProcessEvents = 1;
-                        }
+                        //else
+                        //{
+                        //    iGameStarted = 0;
+                        //    iProcessEvents = 1;
+                        //}
                     }
                     #endregion
                 }
@@ -671,14 +752,19 @@ namespace Star_Defense
                 // Draw the Game Screen overlay
                 spriteBatch.Draw(t2dGameScreen, new Rectangle(0, 0, 1280, 720), Color.White);
 
-                spriteBatch.DrawString(spriteFont, iLivesLeft.ToString(),
-                    vLivesTextLoc, Color.White);
-                spriteBatch.DrawString(spriteFont, iGameWave.ToString(),
-                    vWaveTextLoc, Color.White);
-                spriteBatch.DrawString(spriteFont, iPlayerScore.ToString(),
-                    vScoreTextLoc, Color.White);
-                spriteBatch.DrawString(spriteFont, player.SuperBombs.ToString(),
-                    vSuperBombTextLoc, Color.White);
+                for (int i = 0; i < iMaxInventory; i++ )
+                {
+                    if (inventory[i].IsActive)
+                    {
+                        spriteBatch.DrawString(spriteFont, inventory[i].PowerUpType.ToString(),
+                            vInventoyLoc[i], Color.White);
+                    }
+                    else
+                    {
+                        spriteBatch.DrawString(spriteFont, "[]",
+                            vInventoyLoc[i], Color.White);
+                    }
+                }
 
                 // If the player is dead and this is their last life, display
                 // "GAME OVER" while waiting for the fPlayerRespawnCount to end.
