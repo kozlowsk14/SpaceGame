@@ -46,6 +46,7 @@ namespace Star_Defense
 
         int iGameStarted = 0;
         Texture2D t2dTitleScreen;
+        Texture2D t2dShopScreen;
 
         int iProcessEvents = 1;
         int iLivesLeft = 3;
@@ -118,7 +119,8 @@ namespace Star_Defense
             background = new Background(
                 Content,
                 @"Textures\PrimaryBackground",
-                @"Textures\ParallaxStars");
+                @"Textures\ParallaxStars",
+                @"Textures\shop2");
 
             player = new Player(Content.Load<Texture2D>(@"Textures\PlayerShip"));
 
@@ -142,6 +144,7 @@ namespace Star_Defense
             }
 
             t2dTitleScreen = Content.Load<Texture2D>(@"Textures\TitleScreen");
+            t2dShopScreen = Content.Load<Texture2D>(@"Textures\ParallaxStars");
 
             t2dGameScreen = Content.Load<Texture2D>(@"Textures\GameScreen");
 
@@ -663,6 +666,7 @@ namespace Star_Defense
                 if (iProcessEvents == 1)
                 {
                     #region Processing Events (iProcessEvents==1)
+                    background.IsShop = false;
                     //Accumulate time since the last bullet was fired
                     fBulletDelayTimer += elapsed;
 
@@ -754,62 +758,62 @@ namespace Star_Defense
                 else if (iProcessEvents == 2)
                 {
                     #region Processing Events (iProcessEvents==2)
-
+                    background.IsShop = true;
                     //Accumulate time since the last powerup was generated
-                    fPowerUpSpawnCounter += elapsed;
-                    if (fPowerUpSpawnCounter > fPowerUpSpawnDelay)
-                    {
-                        GeneratePowerup();
-                        fPowerUpSpawnCounter = 0.0f;
-                    }
+                    //fPowerUpSpawnCounter += elapsed;
+                    //if (fPowerUpSpawnCounter > fPowerUpSpawnDelay)
+                    //{
+                    //    GeneratePowerup();
+                    //    fPowerUpSpawnCounter = 0.0f;
+                    //}
 
 
                     // Accumulate time since the player's speed changed
-                    player.SpeedChangeCount += elapsed;
+                    //player.SpeedChangeCount += elapsed;
 
                     // If enough time has passed that the player can change
                     // speed again, call CheckVertMovementKeys
-                    if (player.SpeedChangeCount > player.SpeedChangeDelay)
-                    {
-                        CheckVertMovementKeys(keystate, gamepadstate);
-                    }
+                    //if (player.SpeedChangeCount > player.SpeedChangeDelay)
+                    //{
+                    //    CheckVertMovementKeys(keystate, gamepadstate);
+                    //}
 
                     // Accumulate time since the player moved vertically
-                    player.VerticalChangeCount += elapsed;
+                    //player.VerticalChangeCount += elapsed;
 
                     // If enough time has passed, call CheckHorMovementKeys
-                    if (player.VerticalChangeCount > player.VerticalChangeDelay)
-                    {
-                        CheckHorMovementKeys(keystate, gamepadstate);
-                        //CheckNumKey(keystate, gamepadstate);
-                    }
+                    //if (player.VerticalChangeCount > player.VerticalChangeDelay)
+                    //{
+                    //    CheckHorMovementKeys(keystate, gamepadstate);
+                    //    //CheckNumKey(keystate, gamepadstate);
+                    //}
 
                     // Check any other key presses
-                    CheckOtherKeys(keystate, gamepadstate);
+                    //CheckOtherKeys(keystate, gamepadstate);
 
                     // Update all enemies and explosions
-                    for (int i = 0; i < iTotalMaxEnemies; i++)
-                    {
-                        if (Enemies[i].IsActive)
-                            Enemies[i].Update(gameTime,
-                              background.BackgroundOffset);
+                    //for (int i = 0; i < iTotalMaxEnemies; i++)
+                    //{
+                    //    if (Enemies[i].IsActive)
+                    //        Enemies[i].Update(gameTime,
+                    //          background.BackgroundOffset);
 
-                        if (Explosions[i].IsActive)
-                            Explosions[i].Update(gameTime,
-                              background.BackgroundOffset);
+                    //    if (Explosions[i].IsActive)
+                    //        Explosions[i].Update(gameTime,
+                    //          background.BackgroundOffset);
 
-                    }
+                    //}
 
                     // Update the player's star fighter
                     player.Update(gameTime);
 
                     // Move any active bullets
-                    UpdateBullets(gameTime);
+                   // UpdateBullets(gameTime);
 
                     // Update Powerups
-                    for (int x = 0; x < iMaxPowerups; x++)
-                        powerups[x].Update(gameTime,
-                          background.BackgroundOffset);
+                    //for (int x = 0; x < iMaxPowerups; x++)
+                    //    powerups[x].Update(gameTime,
+                    //      background.BackgroundOffset);
 
                     // See if any active bullets hit any active enemies
                     //CheckBulletHits();
@@ -886,7 +890,7 @@ namespace Star_Defense
             // by all of our drawing code.
             spriteBatch.Begin();
 
-            if (iGameStarted == 1 || iGameStarted == 2)
+            if (iGameStarted == 1 && iProcessEvents != 2)
             {
                 #region Game Play Mode (iGameStarted==1)
 
@@ -963,6 +967,39 @@ namespace Star_Defense
                 if (iProcessEvents == 0 && iLivesLeft == 1)
                     spriteBatch.DrawString(spriteFont, "G A M E   O V E R",
                         vGameOverTextLoc, Color.Gold);
+                #endregion
+            }
+            else if (iProcessEvents == 2)
+            {
+                #region Shop Screen Mode (iProcessEvents==2)
+                background.Draw(spriteBatch);
+                if (gameTime.TotalGameTime.Milliseconds % 1000 < 500)
+                {
+                    spriteBatch.DrawString(spriteFont, "Please Shop",
+                        vStartTextLoc, Color.Purple);
+                }
+                for (int i = 0; i < iMaxInventory - 1; i++)
+                {
+                    if (inventory[i].IsActive && inventory[i].IsSelected)
+                    {
+                        spriteBatch.DrawString(spriteFont, inventory[i].PowerUpType.ToString(),
+                            vInventoyLoc[i], Color.Red);
+                    }
+                    else if (inventory[i].IsActive)
+                    {
+                        spriteBatch.DrawString(spriteFont, inventory[i].PowerUpType.ToString(),
+                           vInventoyLoc[i], Color.White);
+                    }
+                    else
+                    {
+                        spriteBatch.DrawString(spriteFont, "[]",
+                            vInventoyLoc[i], Color.White);
+                    }
+                }
+                //draw score
+                String score = "SCORE: " + iPlayerScore.ToString();
+                spriteBatch.DrawString(spriteFont, score,
+                            vInventoyLoc[iMaxInventory], Color.Gold);
                 #endregion
             }
             else
