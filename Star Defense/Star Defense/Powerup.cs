@@ -7,12 +7,15 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Star_Defense
 {
-    class PowerUp
+    public class PowerUp
     {
         static int iMapHeight = 1920;
-        static Color[] colorPowerUpColors = new Color[10] 
+        static Color[] colorPowerUpColors = new Color[30] 
           { Color.White, Color.Aquamarine, Color.Maroon, 
-            Color.Yellow, Color.Orange, Color.Red,Color.YellowGreen,Color.SteelBlue,Color.SandyBrown,Color.MistyRose};
+            Color.Yellow, Color.Orange, Color.Red,Color.YellowGreen,Color.SteelBlue,
+            Color.SandyBrown,Color.MistyRose,Color.White,Color.White,Color.White,Color.White,
+            Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,
+            Color.White,Color.White,Color.White,Color.White};
 
         AnimatedSprite asSprite;
         int iX = 0;
@@ -20,7 +23,13 @@ namespace Star_Defense
         bool bActive = false;
         int iBackgroundOffset = 0;
         int iPowerUpType = 0;
+        bool isSelected = false;
 
+        public bool IsSelected
+        {
+            get { return isSelected; }
+            set { isSelected = value; }
+        }
         public int X
         {
             get { return iX; }

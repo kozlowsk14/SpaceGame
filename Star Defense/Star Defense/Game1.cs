@@ -57,7 +57,7 @@ namespace Star_Defense
         Texture2D t2dGameScreen;
         SpriteFont spriteFont;
         static int SHIFT = 300;
-        Vector2[] vInventoyLoc = new Vector2[6] { new Vector2(5 + SHIFT, 677), new Vector2(55 + SHIFT, 677), new Vector2(105 + SHIFT, 677), new Vector2(155 + SHIFT, 677), new Vector2(205 + SHIFT, 677), new Vector2(255 + SHIFT, 677) };
+        Vector2[] vInventoyLoc = new Vector2[7] { new Vector2(5 + SHIFT, 677), new Vector2(55 + SHIFT, 677), new Vector2(105 + SHIFT, 677), new Vector2(155 + SHIFT, 677), new Vector2(205 + SHIFT, 677), new Vector2(255 + SHIFT, 677), new Vector2(305 + SHIFT, 677) };
         //Vector2 vLivesTextLoc = new Vector2(100, 677);
         //Vector2 vWaveTextLoc = new Vector2(1065, 663);
         //Vector2 vScoreTextLoc = new Vector2(1065, 695);
@@ -78,6 +78,11 @@ namespace Star_Defense
         private static SoundEffect[] PlayerShots = new SoundEffect[2];
         private static SoundEffect[] ExplosionSounds = new SoundEffect[iMaxExplosionSounds];
         private static SoundEffect PowerUpPickupSound;
+
+        //shopping values
+        static float fMaxCollect = 20.0f;
+        float collectElapse = 0.0f;
+        float gameTimeBeforeShop = 0.0f;
 
         public Game1()
         {
@@ -207,6 +212,15 @@ namespace Star_Defense
 
             for (int x = 0; x < iMaxBullets; x++)
                 RemoveBullet(x);
+            foreach(PowerUp p in inventory){
+                p.IsActive = false;
+                p.IsSelected = false;
+            }
+            foreach (Explosion e in Explosions)
+            {
+                e.IsActive = false;
+            }
+            //TODO: reset all the little timers
         }
 
         protected void StartNewGame()
@@ -326,6 +340,87 @@ namespace Star_Defense
             {
                 inventory[5].IsActive = false;
             }
+        }
+        protected void CheckShopKey(KeyboardState ksKeys,
+                         GamePadState gsPad)
+        {
+            if ((ksKeys.IsKeyDown(Keys.D1)))
+            {
+                inventory[0].IsSelected = !inventory[0].IsSelected;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D2)))
+            {
+                inventory[1].IsSelected = !inventory[1].IsSelected;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D3)))
+            {
+                inventory[2].IsSelected = !inventory[2].IsSelected;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D4)))
+            {
+                inventory[3].IsSelected = !inventory[3].IsSelected;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D5)))
+            {
+                inventory[4].IsSelected = !inventory[4].IsSelected;
+            }
+            else if ((ksKeys.IsKeyDown(Keys.D6)))
+            {
+                inventory[5].IsSelected = !inventory[5].IsSelected;
+            }
+            else if(ksKeys.IsKeyDown(Keys.Space))
+            {
+                int count = 0;
+                //store the index of selected items in the following array
+                int[] toCombine = new int[iMaxInventory];
+                for (int i = 0; i < iMaxInventory; i++ )
+                {
+                    if (inventory[i].IsSelected && inventory[i].IsActive)
+                    {
+                        toCombine[count] = i;
+                        count++;
+                    }
+                }
+                //for right now, can only combine two items
+                if (count == 2)
+                {
+                    int newType = combineItem(inventory[toCombine[0]], inventory[toCombine[1]]);
+                    newType = Math.Min(newType, 29);//keep us in bounds
+                    System.Diagnostics.Debug.WriteLine("NEW ITEM: " + newType);
+                    inventory[toCombine[0]].IsSelected = false;
+                    inventory[toCombine[1]].IsSelected = false;
+                    inventory[toCombine[0]].PowerUpType = newType;
+                    inventory[toCombine[1]].IsActive = false;
+                }
+            }
+            else if (ksKeys.IsKeyDown(Keys.Enter))
+            {
+                iProcessEvents = 1;
+                foreach (PowerUp i in inventory)
+                {
+                    if (i.IsActive)
+                    {
+                        iPlayerScore += i.PowerUpType;
+                    }
+                }
+                StartNewWave();
+            }
+            //foreach (PowerUp i in inventory)
+           // {
+               // System.Diagnostics.Debug.WriteLine(" " + i.PowerUpType + " " + i.IsActive + " " + i.IsSelected);
+            //}
+        }
+
+        //dummy method for now
+        public int combineItem(PowerUp p1, PowerUp p2)
+        {
+            int newValue = 0;
+            if (rndGen.Next(0, 2) == 1)
+            {
+                newValue = p1.PowerUpType + p2.PowerUpType;
+                newValue = (int) (newValue * 1.5);
+            }
+            return newValue;
         }
         protected void CheckHorMovementKeys(KeyboardState ksKeys,
                                  GamePadState gsPad)
@@ -581,6 +676,14 @@ namespace Star_Defense
                         GeneratePowerup();
                         fPowerUpSpawnCounter = 0.0f;
                     }
+                    collectElapse += elapsed; 
+                    //check if it is time to shop
+                    if (fMaxCollect < collectElapse)
+                    {
+                        collectElapse = 0.0f;
+                        iProcessEvents = 2;
+                    }
+
 
                     // Accumulate time since the player's speed changed
                     player.SpeedChangeCount += elapsed;
@@ -648,6 +751,86 @@ namespace Star_Defense
                     }
                     #endregion
                 }
+                else if (iProcessEvents == 2)
+                {
+                    #region Processing Events (iProcessEvents==2)
+
+                    //Accumulate time since the last powerup was generated
+                    fPowerUpSpawnCounter += elapsed;
+                    if (fPowerUpSpawnCounter > fPowerUpSpawnDelay)
+                    {
+                        GeneratePowerup();
+                        fPowerUpSpawnCounter = 0.0f;
+                    }
+
+
+                    // Accumulate time since the player's speed changed
+                    player.SpeedChangeCount += elapsed;
+
+                    // If enough time has passed that the player can change
+                    // speed again, call CheckVertMovementKeys
+                    if (player.SpeedChangeCount > player.SpeedChangeDelay)
+                    {
+                        CheckVertMovementKeys(keystate, gamepadstate);
+                    }
+
+                    // Accumulate time since the player moved vertically
+                    player.VerticalChangeCount += elapsed;
+
+                    // If enough time has passed, call CheckHorMovementKeys
+                    if (player.VerticalChangeCount > player.VerticalChangeDelay)
+                    {
+                        CheckHorMovementKeys(keystate, gamepadstate);
+                        //CheckNumKey(keystate, gamepadstate);
+                    }
+
+                    // Check any other key presses
+                    CheckOtherKeys(keystate, gamepadstate);
+
+                    // Update all enemies and explosions
+                    for (int i = 0; i < iTotalMaxEnemies; i++)
+                    {
+                        if (Enemies[i].IsActive)
+                            Enemies[i].Update(gameTime,
+                              background.BackgroundOffset);
+
+                        if (Explosions[i].IsActive)
+                            Explosions[i].Update(gameTime,
+                              background.BackgroundOffset);
+
+                    }
+
+                    // Update the player's star fighter
+                    player.Update(gameTime);
+
+                    // Move any active bullets
+                    UpdateBullets(gameTime);
+
+                    // Update Powerups
+                    for (int x = 0; x < iMaxPowerups; x++)
+                        powerups[x].Update(gameTime,
+                          background.BackgroundOffset);
+
+                    // See if any active bullets hit any active enemies
+                    //CheckBulletHits();
+
+                    // Check to see if the player has collided with any enemies
+                    //CheckPlayerHits();
+
+                    // Accumulate time since the game board was last updated
+                    // This reflects the actual movement rate of the screen
+                    // as opposed to speed changes by the player
+                    fBoardUpdateDelay += elapsed;
+
+                    // If enough time has elapsed, update the game board.
+                    if (fBoardUpdateDelay > fBoardUpdateInterval)
+                    {
+                        fBoardUpdateDelay = 0f;
+                        UpdateBoard();
+                    }
+                    CheckShopKey(keystate, gamepadstate);
+                    #endregion
+                }
                 else
                 {
                     #region Not Processing Events (iProcessEvents==0)
@@ -703,7 +886,7 @@ namespace Star_Defense
             // by all of our drawing code.
             spriteBatch.Begin();
 
-            if (iGameStarted == 1)
+            if (iGameStarted == 1 || iGameStarted == 2)
             {
                 #region Game Play Mode (iGameStarted==1)
 
@@ -752,12 +935,17 @@ namespace Star_Defense
                 // Draw the Game Screen overlay
                 spriteBatch.Draw(t2dGameScreen, new Rectangle(0, 0, 1280, 720), Color.White);
 
-                for (int i = 0; i < iMaxInventory; i++ )
+                for (int i = 0; i < iMaxInventory - 1; i++ )
                 {
-                    if (inventory[i].IsActive)
+                    if (inventory[i].IsActive && inventory[i].IsSelected)
                     {
                         spriteBatch.DrawString(spriteFont, inventory[i].PowerUpType.ToString(),
-                            vInventoyLoc[i], Color.White);
+                            vInventoyLoc[i], Color.Red);
+                    }
+                    else if (inventory[i].IsActive)
+                    {
+                        spriteBatch.DrawString(spriteFont, inventory[i].PowerUpType.ToString(),
+                           vInventoyLoc[i], Color.White);
                     }
                     else
                     {
@@ -765,6 +953,10 @@ namespace Star_Defense
                             vInventoyLoc[i], Color.White);
                     }
                 }
+                //draw score
+                String score = "SCORE: " + iPlayerScore.ToString();
+                spriteBatch.DrawString(spriteFont, score,
+                            vInventoyLoc[iMaxInventory], Color.Gold);
 
                 // If the player is dead and this is their last life, display
                 // "GAME OVER" while waiting for the fPlayerRespawnCount to end.

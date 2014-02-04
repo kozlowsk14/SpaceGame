@@ -34,6 +34,7 @@ namespace Star_Defense
         public bool IsActive
         {
             get { return bActive; }
+            set { bActive = value; }
         }
  
         public int Offset
