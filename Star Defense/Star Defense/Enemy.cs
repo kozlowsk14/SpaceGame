@@ -23,6 +23,7 @@ namespace Star_Defense
         float fEnemyMoveCount = 0.0f;
         float fEnemyDelay = 0.01f;
         bool bActive = false;
+        int iDirection = -1;
 
         public int X
         {
@@ -88,6 +89,12 @@ namespace Star_Defense
               int X, int Y, int W, int H, int Frames)
         {
             asSprite = new AnimatedSprite(texture, X, Y, W, H, Frames);
+
+            //50 50 chance of going in either direction
+            int direction = rndGen.Next(0,2);
+            if(direction == 0){
+                iDirection = 1;
+            }
         }
 
         public void Deactivate()
@@ -114,10 +121,10 @@ namespace Star_Defense
 
         public void RandomizeMovement()
         {
-            v2motion.X = rndGen.Next(-20, 20);
-            v2motion.Y = rndGen.Next(-2, 2);
+            v2motion.X = rndGen.Next(1,5);
+            v2motion.Y = rndGen.Next(0,4);
             v2motion.Normalize();
-            fSpeed = (float)(rndGen.Next(3, 6));
+            fSpeed = (float)(4);
         }
 
         public void Generate(int iLocation, int iShipY)
@@ -151,24 +158,22 @@ namespace Star_Defense
             fEnemyMoveCount += (float)gametime.ElapsedGameTime.TotalSeconds;
             if (fEnemyMoveCount > fEnemyDelay)
             {
-                iX += (int)((float)v2motion.X * fSpeed);
+                iX += (int)((float)v2motion.X * fSpeed *iDirection);
                 iY += (int)((float)v2motion.Y * fSpeed);
 
-                if (rndGen.Next(200) == 1)
-                {
-                    RandomizeMovement();
-                }
+                //if (rndGen.Next(200) == 1)
+                //{
+                //    RandomizeMovement();
+                //}
 
                 if (iX < iPlayAreaLeft)
                 {
-                    iX = iPlayAreaLeft;
-                    RandomizeMovement();
+                    iX = iPlayAreaRight;
                 }
 
                 if (iX > iPlayAreaRight)
                 {
-                    iX = iPlayAreaRight;
-                    RandomizeMovement();
+                    iX = iPlayAreaLeft;
                 }
 
                 if (iY < 0)
