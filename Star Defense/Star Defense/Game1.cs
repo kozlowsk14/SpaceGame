@@ -57,8 +57,8 @@ namespace Star_Defense
 
         Texture2D t2dGameScreen;
         SpriteFont spriteFont;
-        static int SHIFT = 300;
-        Vector2[] vInventoyLoc = new Vector2[7] { new Vector2(5 + SHIFT, 677), new Vector2(55 + SHIFT, 677), new Vector2(105 + SHIFT, 677), new Vector2(155 + SHIFT, 677), new Vector2(205 + SHIFT, 677), new Vector2(255 + SHIFT, 677), new Vector2(305 + SHIFT, 677) };
+        static int SHIFT = 200;
+        Vector2[] vInventoyLoc = new Vector2[7] { new Vector2(5 + SHIFT, 677), new Vector2(55 + SHIFT, 677), new Vector2(105 + SHIFT, 677), new Vector2(155 + SHIFT, 677), new Vector2(205 + SHIFT, 677), new Vector2(255 + SHIFT, 677), new Vector2(275 + SHIFT, 677) };
         //Vector2 vLivesTextLoc = new Vector2(100, 677);
         //Vector2 vWaveTextLoc = new Vector2(1065, 663);
         //Vector2 vScoreTextLoc = new Vector2(1065, 695);
@@ -79,11 +79,13 @@ namespace Star_Defense
         private static SoundEffect[] PlayerShots = new SoundEffect[2];
         private static SoundEffect[] ExplosionSounds = new SoundEffect[iMaxExplosionSounds];
         private static SoundEffect PowerUpPickupSound;
+        
+        //Game timer
+        float timeLeft = 10.0f;
 
-        //shopping values
-        static float fMaxCollect = 20.0f;
-        float collectElapse = 0.0f;
-        float gameTimeBeforeShop = 0.0f;
+        //Shop "Powerup"
+        PowerUp shopPowerUp;
+        bool restetElapsed = false;
 
         public Game1()
         {
@@ -155,6 +157,8 @@ namespace Star_Defense
                 powerups[i] = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
             }
 
+            shopPowerUp = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
+
             for (int i = 0; i < iMaxInventory; i++)
             {
                 inventory[i] = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
@@ -210,7 +214,7 @@ namespace Star_Defense
         {
             iProcessEvents = 1;
             iGameStarted = 1;
-            iGameWave++;
+            iGameWave = 0;
             GenerateEnemies();
 
             for (int x = 0; x < iMaxBullets; x++)
@@ -235,6 +239,10 @@ namespace Star_Defense
             iGameStarted = 1;
             iGameWave = 0;
             iPlayerScore = 0;
+
+            shopPowerUp.IsActive = false;
+            timeLeft = 40.0f;
+
             StartNewWave();
         }
 
@@ -404,8 +412,10 @@ namespace Star_Defense
                     if (i.IsActive)
                     {
                         iPlayerScore += i.PowerUpType;
+
                     }
                 }
+                timeLeft += 20.0f;
                 StartNewWave();
             }
             //foreach (PowerUp i in inventory)
@@ -600,14 +610,13 @@ namespace Star_Defense
                     powerups[x].IsActive = false;
                     PowerUpPickupSound.Play(1.0f, 0f, 0f);
                 }
-                //print inventory to console until we figure out how to update the gui
-                //for (int i = 0; i < iMaxInventory; i++)
-                //{
-                //    System.Diagnostics.Debug.WriteLine("" + inventory[i].PowerUpType + inventory[i].IsActive);
-                    
-                //}
-                //System.Diagnostics.Debug.WriteLine("\n\n");
 
+            }
+            if ((shopPowerUp.IsActive) &&
+                (Intersects(player.BoundingBox, shopPowerUp.BoundingBox)))
+            {
+                shopPowerUp.IsActive = false;
+                iProcessEvents = 2;
             }
         }
 
@@ -635,6 +644,15 @@ namespace Star_Defense
                     powerups[x].Activate();
                     break;
                 }
+            }
+            //10%chance of generationg shop powerup
+            if (rndGen.Next(0, 2) == 1)
+            {
+                shopPowerUp.X = 600;//always spaw on the right hand side
+                shopPowerUp.Y = background.BackgroundOffset;
+                shopPowerUp.PowerUpType = 30;//last one in the color array
+                shopPowerUp.Offset = background.BackgroundOffset;
+                shopPowerUp.Activate();
             }
         }
 
@@ -680,12 +698,12 @@ namespace Star_Defense
                         GeneratePowerup();
                         fPowerUpSpawnCounter = 0.0f;
                     }
-                    collectElapse += elapsed; 
+                    timeLeft = timeLeft - elapsed; 
                     //check if it is time to shop
-                    if (fMaxCollect < collectElapse)
+                    if (timeLeft <= 0)
                     {
-                        collectElapse = 0.0f;
-                        iProcessEvents = 2;
+                        iProcessEvents = 0;
+                        iGameStarted = 0;
                     }
 
 
@@ -735,7 +753,7 @@ namespace Star_Defense
                     for (int x = 0; x < iMaxPowerups; x++)
                         powerups[x].Update(gameTime,
                           background.BackgroundOffset);
-
+                    shopPowerUp.Update(gameTime,background.BackgroundOffset);
                     // See if any active bullets hit any active enemies
                     //CheckBulletHits();
 
@@ -827,11 +845,11 @@ namespace Star_Defense
                     fBoardUpdateDelay += elapsed;
 
                     // If enough time has elapsed, update the game board.
-                    if (fBoardUpdateDelay > fBoardUpdateInterval)
-                    {
-                        fBoardUpdateDelay = 0f;
-                        UpdateBoard();
-                    }
+                    //if (fBoardUpdateDelay > fBoardUpdateInterval)
+                    //{
+                    //    fBoardUpdateDelay = 0f;
+                    //    UpdateBoard();
+                    //}
                     CheckShopKey(keystate, gamepadstate);
                     #endregion
                 }
@@ -931,7 +949,8 @@ namespace Star_Defense
                 {
                     powerups[i].Draw(spriteBatch);
                 }
-
+                shopPowerUp.Draw(spriteBatch);
+                
                 // Draw the player's explosion if it is happening
                 if (Explosions[iTotalMaxEnemies].IsActive)
                     Explosions[iTotalMaxEnemies].Draw(spriteBatch, true);
@@ -957,8 +976,11 @@ namespace Star_Defense
                             vInventoyLoc[i], Color.White);
                     }
                 }
+
+
+                int temp = (int)timeLeft;
                 //draw score
-                String score = "SCORE: " + iPlayerScore.ToString();
+                String score = "Time: " + temp.ToString() + "  SCORE: " + iPlayerScore.ToString();
                 spriteBatch.DrawString(spriteFont, score,
                             vInventoyLoc[iMaxInventory], Color.Gold);
 
@@ -996,8 +1018,9 @@ namespace Star_Defense
                             vInventoyLoc[i], Color.White);
                     }
                 }
+                int temp = (int)timeLeft;
                 //draw score
-                String score = "SCORE: " + iPlayerScore.ToString();
+                String score = "Time: " + temp.ToString () + "  SCORE: " + iPlayerScore.ToString();
                 spriteBatch.DrawString(spriteFont, score,
                             vInventoyLoc[iMaxInventory], Color.Gold);
                 #endregion

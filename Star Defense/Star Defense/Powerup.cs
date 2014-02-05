@@ -10,12 +10,12 @@ namespace Star_Defense
     public class PowerUp
     {
         static int iMapHeight = 1920;
-        static Color[] colorPowerUpColors = new Color[30] 
-          { Color.White, Color.Aquamarine, Color.Maroon, 
+        static Color[] colorPowerUpColors = new Color[31] 
+          { Color.Green, Color.Aquamarine, Color.Maroon, 
             Color.Yellow, Color.Orange, Color.Red,Color.YellowGreen,Color.SteelBlue,
             Color.SandyBrown,Color.MistyRose,Color.White,Color.White,Color.White,Color.White,
             Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,
-            Color.White,Color.White,Color.White,Color.White};
+            Color.White,Color.White,Color.White,Color.White,Color.White};
 
         AnimatedSprite asSprite;
         int iX = 0;
