@@ -17,7 +17,7 @@ namespace Star_Defense
             Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,Color.White,
             Color.White,Color.White,Color.White,Color.White,Color.White};
 
-        AnimatedSprite asSprite;
+        AnimatedSprite2 asSprite;
         int iX = 0;
         int iY = -100;
         bool bActive = false;
@@ -60,7 +60,7 @@ namespace Star_Defense
             set
             {
                 iPowerUpType = value;
-                asSprite.Tint = colorPowerUpColors[iPowerUpType];
+                asSprite.index = iPowerUpType;
             }
         }
 
@@ -77,9 +77,9 @@ namespace Star_Defense
             }
         }
 
-        public PowerUp(Texture2D texture)
+        public PowerUp(Texture2D[] texture,int i)
         {
-            asSprite = new AnimatedSprite(texture, 0, 0, 32, 32, 23);
+            asSprite = new AnimatedSprite2(texture, 0, 0, 32, 32, 1, i);
         }
 
         public void Activate()

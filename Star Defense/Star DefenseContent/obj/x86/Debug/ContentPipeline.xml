@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb</Output>
-      <Time>2014-01-30T12:31:20.36-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb</Output>
+      <Time>2014-01-30T18:27:16.1719617-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\ParallaxStars.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb</Output>
-      <Time>2014-01-30T12:31:20.374-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb</Output>
+      <Time>2014-01-30T18:27:16.1799621-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\explosions.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb</Output>
-      <Time>2014-01-30T12:31:20.395-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb</Output>
+      <Time>2014-01-30T18:27:16.1919628-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\PrimaryBackground.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb</Output>
-      <Time>2014-01-30T12:31:20.382-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb</Output>
+      <Time>2014-01-30T18:27:16.1849624-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\PlayerShip.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb</Output>
-      <Time>2014-01-30T12:31:20.375-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb</Output>
+      <Time>2014-01-30T18:27:16.1809622-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\PlayerBullet.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb</Output>
-      <Time>2014-01-30T12:31:20.375-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb</Output>
+      <Time>2014-01-30T18:27:16.1809622-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\Enemy.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb</Output>
-      <Time>2014-01-30T12:31:20.37-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb</Output>
+      <Time>2014-01-30T18:27:16.177962-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\TitleScreen.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb</Output>
-      <Time>2014-01-30T12:31:20.389-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb</Output>
+      <Time>2014-01-30T18:27:16.1889626-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\GameScreen.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb</Output>
-      <Time>2014-01-30T12:31:20.371-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb</Output>
+      <Time>2014-01-30T18:27:16.177962-08:00</Time>
     </Item>
     <Item>
       <Source>Textures\PowerUp.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb</Output>
-      <Time>2014-01-30T12:31:20.376-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb</Output>
+      <Time>2014-01-30T18:27:16.1819622-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\battle003.wav</Source>
@@ -97,8 +97,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb</Output>
-      <Time>2014-01-30T12:31:20.362-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb</Output>
+      <Time>2014-01-30T18:27:16.1729617-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\battle004.wav</Source>
@@ -106,8 +106,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb</Output>
-      <Time>2014-01-30T12:31:20.363-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb</Output>
+      <Time>2014-01-30T18:27:16.1739618-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\scifi002.wav</Source>
@@ -115,8 +115,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb</Output>
-      <Time>2014-01-30T12:31:20.365-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb</Output>
+      <Time>2014-01-30T18:27:16.1749618-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\scifi041.wav</Source>
@@ -124,8 +124,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb</Output>
-      <Time>2014-01-30T12:31:20.366-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb</Output>
+      <Time>2014-01-30T18:27:16.1749618-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\scifi050.wav</Source>
@@ -133,8 +133,314 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb</Output>
-      <Time>2014-01-30T12:31:20.367-08:00</Time>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb</Output>
+      <Time>2014-01-30T18:27:16.1759619-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\shop2.png</Source>
+      <Name>Textures\shop2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\shop2.xnb</Output>
+      <Time>2014-02-03T19:15:06.5283083-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\0_pizza.png</Source>
+      <Name>Textures\sprites\0_pizza</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\0_pizza.xnb</Output>
+      <Time>2014-02-07T14:53:07.6046942-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\10_gingerBread.png</Source>
+      <Name>Textures\sprites\10_gingerBread</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\10_gingerBread.xnb</Output>
+      <Time>2014-02-07T14:53:07.6576973-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\11_pot.png</Source>
+      <Name>Textures\sprites\11_pot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\11_pot.xnb</Output>
+      <Time>2014-02-07T14:53:07.6406963-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\12_potato.png</Source>
+      <Name>Textures\sprites\12_potato</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\12_potato.xnb</Output>
+      <Time>2014-02-07T14:53:07.7297014-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\13_watch.png</Source>
+      <Name>Textures\sprites\13_watch</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\13_watch.xnb</Output>
+      <Time>2014-02-07T14:53:07.7387019-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\14_Kenny.png</Source>
+      <Name>Textures\sprites\14_Kenny</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\14_Kenny.xnb</Output>
+      <Time>2014-02-07T14:53:07.7457023-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\15_keyboard.png</Source>
+      <Name>Textures\sprites\15_keyboard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\15_keyboard.xnb</Output>
+      <Time>2014-02-07T14:53:07.7527027-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\16_Apple_Monitor.png</Source>
+      <Name>Textures\sprites\16_Apple_Monitor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\16_Apple_Monitor.xnb</Output>
+      <Time>2014-02-07T14:53:07.7697037-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\17_Mobile_phone.png</Source>
+      <Name>Textures\sprites\17_Mobile_phone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\17_Mobile_phone.xnb</Output>
+      <Time>2014-02-07T14:53:07.7777041-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\18_Apple.png</Source>
+      <Name>Textures\sprites\18_Apple</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\18_Apple.xnb</Output>
+      <Time>2014-02-07T14:53:07.7857046-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\19_toliet.png</Source>
+      <Name>Textures\sprites\19_toliet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\19_toliet.xnb</Output>
+      <Time>2014-02-07T14:53:07.8007055-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\1_ham.png</Source>
+      <Name>Textures\sprites\1_ham</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\1_ham.xnb</Output>
+      <Time>2014-02-07T14:53:07.7207009-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\20_turd.png</Source>
+      <Name>Textures\sprites\20_turd</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\20_turd.xnb</Output>
+      <Time>2014-02-07T14:53:07.8167064-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\21_wheel.png</Source>
+      <Name>Textures\sprites\21_wheel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\21_wheel.xnb</Output>
+      <Time>2014-02-07T14:53:07.8397077-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\22_wheel.png</Source>
+      <Name>Textures\sprites\22_wheel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\22_wheel.xnb</Output>
+      <Time>2014-02-07T14:53:07.8467081-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\23_windshield.png</Source>
+      <Name>Textures\sprites\23_windshield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\23_windshield.xnb</Output>
+      <Time>2014-02-07T14:53:07.8527084-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\24_beer.png</Source>
+      <Name>Textures\sprites\24_beer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\24_beer.xnb</Output>
+      <Time>2014-02-07T14:53:07.8607089-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\2_basketBall.png</Source>
+      <Name>Textures\sprites\2_basketBall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\2_basketBall.xnb</Output>
+      <Time>2014-02-07T14:53:07.6926993-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\30_easterEgg.png</Source>
+      <Name>Textures\sprites\30_easterEgg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\30_easterEgg.xnb</Output>
+      <Time>2014-02-07T14:53:07.6646977-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\31_rageMode.png</Source>
+      <Name>Textures\sprites\31_rageMode</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\31_rageMode.xnb</Output>
+      <Time>2014-02-07T14:53:07.7607032-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\32_iPhone.png</Source>
+      <Name>Textures\sprites\32_iPhone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\32_iPhone.xnb</Output>
+      <Time>2014-02-07T14:53:07.7937051-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\33_toiletMonster.png</Source>
+      <Name>Textures\sprites\33_toiletMonster</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\33_toiletMonster.xnb</Output>
+      <Time>2014-02-07T14:53:07.8077059-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\34_breakfast.png</Source>
+      <Name>Textures\sprites\34_breakfast</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\34_breakfast.xnb</Output>
+      <Time>2014-02-07T14:53:07.8257069-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\35_xboxKid.png</Source>
+      <Name>Textures\sprites\35_xboxKid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\35_xboxKid.xnb</Output>
+      <Time>2014-02-07T14:53:07.8317072-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\36_Arrested.png</Source>
+      <Name>Textures\sprites\36_Arrested</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\36_Arrested.xnb</Output>
+      <Time>2014-02-07T14:53:07.8677093-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\37_dirtyToilet.png</Source>
+      <Name>Textures\sprites\37_dirtyToilet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\37_dirtyToilet.xnb</Output>
+      <Time>2014-02-07T14:53:07.8747097-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\3_tv.png</Source>
+      <Name>Textures\sprites\3_tv</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\3_tv.xnb</Output>
+      <Time>2014-02-07T14:53:07.6846988-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\4_fish.png</Source>
+      <Name>Textures\sprites\4_fish</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\4_fish.xnb</Output>
+      <Time>2014-02-07T14:53:07.6486968-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\5_controller.png</Source>
+      <Name>Textures\sprites\5_controller</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\5_controller.xnb</Output>
+      <Time>2014-02-07T14:53:07.6716981-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\6_car.png</Source>
+      <Name>Textures\sprites\6_car</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\6_car.xnb</Output>
+      <Time>2014-02-07T14:53:07.6266955-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\7_skateboard.png</Source>
+      <Name>Textures\sprites\7_skateboard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\7_skateboard.xnb</Output>
+      <Time>2014-02-07T14:53:07.6156949-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\8_tree.png</Source>
+      <Name>Textures\sprites\8_tree</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\8_tree.xnb</Output>
+      <Time>2014-02-07T14:53:07.6786985-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\sprites\9_banana.png</Source>
+      <Name>Textures\sprites\9_banana</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\9_banana.xnb</Output>
+      <Time>2014-02-07T14:53:07.6996997-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -142,10 +448,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star DefenseContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star DefenseContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star DefenseContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star DefenseContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -174,7 +480,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-01-18T15:27:32.763-08:00</Value>
+        <Value>2014-01-18T14:21:35.0961306-08:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

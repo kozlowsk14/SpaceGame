@@ -1,3 +1,4 @@
 c:\users\kurt\documents\visual studio 2010\Projects\Star Defense\Star Defense\Star DefenseContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\lenovo\Documents\Visual Studio 2010\repo\SpaceGame\Star Defense\Star DefenseContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star DefenseContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star DefenseContent\obj\x86\Debug\ResolveAssemblyReference.cache

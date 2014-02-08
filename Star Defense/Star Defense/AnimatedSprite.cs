@@ -16,15 +16,15 @@ namespace Star_Defense
 
         int iFrameOffsetX = 0;
         int iFrameOffsetY = 0;
-        int iFrameWidth = 32;
-        int iFrameHeight = 32;
+        public int iFrameWidth = 32;
+        public int iFrameHeight = 32;
 
-        int iFrameCount = 1;
+        public int iFrameCount = 1;
         int iCurrentFrame = 0;
-        int iScreenX = 0;
-        int iScreenY = 0;
+        public int iScreenX = 0;
+        public int iScreenY = 0;
 
-        Color cTinting = Color.White;
+        public Color cTinting = Color.White;
 
         bool bAnimating = true;
 
@@ -64,7 +64,7 @@ namespace Star_Defense
             set { cTinting = value; }
         }
 
-        public AnimatedSprite(
+        public  AnimatedSprite(
             Texture2D texture,
             int FrameOffsetX,
             int FrameOffsetY,

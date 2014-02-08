@@ -61,3 +61,58 @@ C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\ob
 C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Star Defense.exe
 C:\Users\MarleyRutkowski\Documents\GitHub\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Star Defense.pdb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Fonts\Pericles.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\ParallaxStars.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\explosions.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PrimaryBackground.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerShip.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PlayerBullet.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\Enemy.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\TitleScreen.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\GameScreen.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\PowerUp.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle003.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\battle004.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi002.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi041.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Sounds\scifi050.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Star Defense.exe
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Star Defense.pdb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Star Defense.exe
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\obj\x86\Debug\Star Defense.pdb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\shop2.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\0_pizza.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\10_gingerBread.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\11_pot.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\12_potato.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\13_watch.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\14_Kenny.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\15_keyboard.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\16_Apple_Monitor.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\17_Mobile_phone.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\18_Apple.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\19_toliet.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\1_ham.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\20_turd.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\21_wheel.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\22_wheel.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\23_windshield.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\24_beer.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\2_basketBall.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\30_easterEgg.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\31_rageMode.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\32_iPhone.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\33_toiletMonster.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\34_breakfast.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\35_xboxKid.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\36_Arrested.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\37_dirtyToilet.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\3_tv.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\4_fish.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\5_controller.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\6_car.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\7_skateboard.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\8_tree.xnb
+C:\Users\lenovo\Documents\Visual Studio 2010\rep3\SpaceGame\Star Defense\Star Defense\bin\x86\Debug\Content\Textures\sprites\9_banana.xnb

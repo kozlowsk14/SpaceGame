@@ -1,6 +1,8 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -71,9 +73,11 @@ namespace Star_Defense
         static int iMaxInventory = 6;
         PowerUp[] powerups = new PowerUp[iMaxPowerups];
         PowerUp[] inventory = new PowerUp[iMaxInventory];
+
+
         float fSuperBombTimer = 2f;
         float fPowerUpSpawnCounter = 0.0f;
-        float fPowerUpSpawnDelay = 5.0f;
+        float fPowerUpSpawnDelay = 1.0f;
 
         static int iMaxExplosionSounds = 2;
         private static SoundEffect[] PlayerShots = new SoundEffect[2];
@@ -152,16 +156,33 @@ namespace Star_Defense
 
             spriteFont = Content.Load<SpriteFont>(@"Fonts\Pericles");
 
-            for (int i = 0; i < iMaxPowerups; i++)
+            //populate powerup texture array
+            //Regex r = new Regex("");
+            //string temp = Regex.Replace(Directory.GetCurrentDirectory(),);
+            //System.String pathStr =Directory.GetCurrentDirectory() + "\\Textures\\sprites"; 
+            string[] filePaths = Directory.GetFiles(@"Content\Textures\sprites", "*.xnb");
+            Texture2D[] textures = new Texture2D[filePaths.Length];
+            for (int i = 0; i < filePaths.Length; i++)
             {
-                powerups[i] = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
+                string s = filePaths[i];
+                int length = s.IndexOf(".");
+                System.Diagnostics.Debug.WriteLine("original string: " + s + s.Substring(8, length-8) + "lenght " + length.ToString());
+                //textures[i] = Content.Load<Texture2D>(Path.GetFullPath(filePaths[i]));
+                textures[i] = Content.Load<Texture2D>(s.Substring(8, length - 8));
             }
 
-            shopPowerUp = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
+
+
+            for (int i = 0; i < iMaxPowerups; i++)
+            {
+                powerups[i] = new PowerUp(textures, 0);
+            }
+
+            shopPowerUp = new PowerUp(textures,textures.Length);
 
             for (int i = 0; i < iMaxInventory; i++)
             {
-                inventory[i] = new PowerUp(Content.Load<Texture2D>(@"Textures\PowerUp"));
+                inventory[i] = new PowerUp(textures,0);
             }
 
             PlayerShots[0] = Content.Load<SoundEffect>(@"Sounds\Scifi002");
@@ -637,9 +658,8 @@ namespace Star_Defense
                 if (!powerups[x].IsActive)
                 {
                     powerups[x].X = rndGen.Next(0, 720);
-                    System.Diagnostics.Debug.WriteLine(background.BackgroundOffset);
                     powerups[x].Y = background.BackgroundOffset;
-                    powerups[x].PowerUpType = rndGen.Next(0, 10);
+                    powerups[x].PowerUpType = rndGen.Next(0, 30);
                     powerups[x].Offset = background.BackgroundOffset;
                     powerups[x].Activate();
                     break;
