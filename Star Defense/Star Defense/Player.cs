@@ -17,6 +17,7 @@ namespace Star_Defense
         int iScrollRate = 0;
         int iShipAccelerationRate = 1;
         int iShipHorMoveRate = 7;
+        public int iShipVerMoveRate = 7;
         float fSpeedChangeCount = 0.0f;
         float fSpeedChangeDelay = 0.1f;
         float fVerticalChangeCount = 0.0f;

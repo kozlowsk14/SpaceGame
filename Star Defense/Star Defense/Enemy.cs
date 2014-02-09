@@ -169,11 +169,15 @@ namespace Star_Defense
                 if (iX < iPlayAreaLeft)
                 {
                     iX = iPlayAreaRight;
+                    RandomizeMovement();
+                    iY += 720;
                 }
 
                 if (iX > iPlayAreaRight)
                 {
                     iX = iPlayAreaLeft;
+                    RandomizeMovement();
+                    iY += 720;
                 }
 
                 if (iY < 0)

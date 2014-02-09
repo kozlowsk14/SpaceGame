@@ -73,6 +73,7 @@ namespace Star_Defense
         static int iMaxInventory = 6;
         PowerUp[] powerups = new PowerUp[iMaxPowerups];
         PowerUp[] inventory = new PowerUp[iMaxInventory];
+        Texture2D[] textures;
 
 
         float fSuperBombTimer = 2f;
@@ -90,6 +91,7 @@ namespace Star_Defense
         //Shop "Powerup"
         PowerUp shopPowerUp;
         bool restetElapsed = false;
+        int iTextureSize = 0;
 
         public Game1()
         {
@@ -161,7 +163,8 @@ namespace Star_Defense
             //string temp = Regex.Replace(Directory.GetCurrentDirectory(),);
             //System.String pathStr =Directory.GetCurrentDirectory() + "\\Textures\\sprites"; 
             string[] filePaths = Directory.GetFiles(@"Content\Textures\sprites", "*.xnb");
-            Texture2D[] textures = new Texture2D[filePaths.Length];
+            Array.Sort<string>(filePaths);
+            textures = new Texture2D[filePaths.Length];
             for (int i = 0; i < filePaths.Length; i++)
             {
                 string s = filePaths[i];
@@ -177,8 +180,8 @@ namespace Star_Defense
             {
                 powerups[i] = new PowerUp(textures, 0);
             }
-
-            shopPowerUp = new PowerUp(textures,textures.Length);
+            iTextureSize = textures.Length - 1;
+            shopPowerUp = new PowerUp(textures,textures.Length-1);
 
             for (int i = 0; i < iMaxInventory; i++)
             {
@@ -225,7 +228,6 @@ namespace Star_Defense
             // generated.
             iGameWave--;
             iMaxEnemies--;
-
             // Stop the player's ship
             player.ScrollRate = 0;
             player.Reset();
@@ -263,6 +265,8 @@ namespace Star_Defense
 
             shopPowerUp.IsActive = false;
             timeLeft = 40.0f;
+            player.X = 360;
+            player.Y = 600;
 
             StartNewWave();
         }
@@ -376,29 +380,36 @@ namespace Star_Defense
         protected void CheckShopKey(KeyboardState ksKeys,
                          GamePadState gsPad)
         {
+            bool hitKey = false;
             if ((ksKeys.IsKeyDown(Keys.D1)))
             {
                 inventory[0].IsSelected = !inventory[0].IsSelected;
+                hitKey = true;
             }
             else if ((ksKeys.IsKeyDown(Keys.D2)))
             {
                 inventory[1].IsSelected = !inventory[1].IsSelected;
+                hitKey = true;
             }
             else if ((ksKeys.IsKeyDown(Keys.D3)))
             {
                 inventory[2].IsSelected = !inventory[2].IsSelected;
+                hitKey = true;
             }
             else if ((ksKeys.IsKeyDown(Keys.D4)))
             {
                 inventory[3].IsSelected = !inventory[3].IsSelected;
+                hitKey = true;
             }
             else if ((ksKeys.IsKeyDown(Keys.D5)))
             {
                 inventory[4].IsSelected = !inventory[4].IsSelected;
+                hitKey = true;
             }
             else if ((ksKeys.IsKeyDown(Keys.D6)))
             {
                 inventory[5].IsSelected = !inventory[5].IsSelected;
+                hitKey = true;
             }
             else if(ksKeys.IsKeyDown(Keys.Space))
             {
@@ -430,19 +441,25 @@ namespace Star_Defense
                 iProcessEvents = 1;
                 foreach (PowerUp i in inventory)
                 {
-                    if (i.IsActive)
+                    if (i.IsActive && i.PowerUpType > 0)
                     {
                         iPlayerScore += i.PowerUpType;
-
                     }
                 }
-                timeLeft += 20.0f;
+                //figure out how much gas to give
+                float shopCost = Math.Min(iPlayerScore, 20.0f);
+                timeLeft += shopCost;
+                iPlayerScore -= (int) shopCost;
+
+                //make the game a little harder
+                iMaxVertSpeed += 1;
                 StartNewWave();
             }
-            //foreach (PowerUp i in inventory)
-           // {
-               // System.Diagnostics.Debug.WriteLine(" " + i.PowerUpType + " " + i.IsActive + " " + i.IsSelected);
-            //}
+            if (hitKey)
+            {
+                //fix infinit toggle issue
+                System.Threading.Thread.Sleep(100);
+            }
         }
 
         //dummy method for now
@@ -480,6 +497,24 @@ namespace Star_Defense
                     player.X += player.HorMovementRate;
                     player.Thrusting = true;
                     player.Facing = 0;
+                    bResetTimer = true;
+                }
+            }
+            if ((ksKeys.IsKeyDown(Keys.Up)))
+            {
+                if (player.Y > iPlayAreaTop)
+                {
+                    player.Y -= player.iShipVerMoveRate;
+                    player.Thrusting = true;
+                    bResetTimer = true;
+                }
+            }
+            if ((ksKeys.IsKeyDown(Keys.Down)))
+            {
+                if (player.Y < iPlayAreaBottom)
+                {
+                    player.Y += player.iShipVerMoveRate + iMaxVertSpeed;
+                    player.Thrusting = true;
                     bResetTimer = true;
                 }
             }
@@ -554,7 +589,7 @@ namespace Star_Defense
                     {
                         // Stop event processing
                         iProcessEvents = 0;
-
+                        timeLeft -= 5;
                         // Set up the ship's explosion
                         Explosions[iTotalMaxEnemies].Activate(
                             player.X - 16,
@@ -583,6 +618,7 @@ namespace Star_Defense
                             iLivesLeft = 1;
                             iGameStarted = 0;
                             iProcessEvents = 1;
+                            System.Threading.Thread.Sleep(4000);
                         }
 
                         //clear out inventory
@@ -659,7 +695,7 @@ namespace Star_Defense
                 {
                     powerups[x].X = rndGen.Next(0, 720);
                     powerups[x].Y = background.BackgroundOffset;
-                    powerups[x].PowerUpType = rndGen.Next(0, 30);
+                    powerups[x].PowerUpType = rndGen.Next(1, 30);
                     powerups[x].Offset = background.BackgroundOffset;
                     powerups[x].Activate();
                     break;
@@ -668,11 +704,14 @@ namespace Star_Defense
             //10%chance of generationg shop powerup
             if (rndGen.Next(0, 2) == 1)
             {
-                shopPowerUp.X = 600;//always spaw on the right hand side
-                shopPowerUp.Y = background.BackgroundOffset;
-                shopPowerUp.PowerUpType = 30;//last one in the color array
-                shopPowerUp.Offset = background.BackgroundOffset;
-                shopPowerUp.Activate();
+                if (!shopPowerUp.IsActive)
+                {
+                    shopPowerUp.X = 600;//always spaw on the right hand side
+                    shopPowerUp.Y = background.BackgroundOffset;
+                    shopPowerUp.PowerUpType = iTextureSize;
+                    shopPowerUp.Offset = background.BackgroundOffset;
+                    shopPowerUp.Activate();
+                }
             }
         }
 
@@ -870,7 +909,10 @@ namespace Star_Defense
                     //    fBoardUpdateDelay = 0f;
                     //    UpdateBoard();
                     //}
-                    CheckShopKey(keystate, gamepadstate);
+                    if (fBoardUpdateDelay > fBoardUpdateInterval*10)
+                    {
+                        CheckShopKey(keystate, gamepadstate);
+                    }
                     #endregion
                 }
                 else
@@ -987,13 +1029,11 @@ namespace Star_Defense
                     }
                     else if (inventory[i].IsActive)
                     {
-                        spriteBatch.DrawString(spriteFont, inventory[i].PowerUpType.ToString(),
-                           vInventoyLoc[i], Color.White);
+                        spriteBatch.Draw(textures[inventory[i].PowerUpType], vInventoyLoc[i], Color.White);
                     }
                     else
                     {
-                        spriteBatch.DrawString(spriteFont, "[]",
-                            vInventoyLoc[i], Color.White);
+                        spriteBatch.Draw(textures[0], vInventoyLoc[i], Color.White);
                     }
                 }
 
@@ -1018,7 +1058,7 @@ namespace Star_Defense
                 if (gameTime.TotalGameTime.Milliseconds % 1000 < 500)
                 {
                     spriteBatch.DrawString(spriteFont, "Please Shop",
-                        vStartTextLoc, Color.Purple);
+                        vStartTextLoc, Color.Black);
                 }
                 for (int i = 0; i < iMaxInventory - 1; i++)
                 {
@@ -1029,13 +1069,11 @@ namespace Star_Defense
                     }
                     else if (inventory[i].IsActive)
                     {
-                        spriteBatch.DrawString(spriteFont, inventory[i].PowerUpType.ToString(),
-                           vInventoyLoc[i], Color.White);
+                        spriteBatch.Draw(textures[inventory[i].PowerUpType], vInventoyLoc[i], Color.White);
                     }
                     else
                     {
-                        spriteBatch.DrawString(spriteFont, "[]",
-                            vInventoyLoc[i], Color.White);
+                        spriteBatch.Draw(textures[0], vInventoyLoc[i], Color.White);
                     }
                 }
                 int temp = (int)timeLeft;

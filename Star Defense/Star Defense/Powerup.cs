@@ -128,6 +128,13 @@ namespace Star_Defense
                 asSprite.Draw(sb, GetDrawX(), GetDrawY(), false);
             }
         }
+        public void Draw2(SpriteBatch sb,int x, int y)
+        {
+            if (bActive)
+            {
+                asSprite.Draw(sb, x,y, false);
+            }
+        }
 
 
     }
